@@ -26,13 +26,13 @@ fs.createReadStream("finalQuotes.csv")
     console.log(err);
   });
 
-app.get("/", (req, res) => {
+app.get("/", cors(), (req, res) => {
   // sorteia uma frase do array Quotes
   let quote = Quotes[Math.floor(Math.random() * Quotes.length)];
   res.send({ mensagem: quote });
 });
 
-app.get("*", (req, res) => {
+app.get("*", cors(), (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
