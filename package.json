@@ -4,7 +4,7 @@
   "scripts": {
     "front": "cd front && npm start",
     "back": "cd back && node server.js",
-    "heroku-postbuild": "cd front && npm install && cd.. && cd back && npm install && npm run build"
+    "heroku-postbuild": "cd front && npm install && cd back && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
