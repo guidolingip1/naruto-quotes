@@ -2,7 +2,7 @@
 
 ## Como ficou
 
-![projeto](https://github.com/guidolingip1/bootcamp-impulso/blob/master/projeto_naruto/resultado.gif)
+![projeto](https://github.com/guidolingip1/bootcamp-impulso/blob/master/projeto_naruto/resultados.gif)
 
 ## Como eu fiz
 
