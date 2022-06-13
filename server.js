@@ -2,10 +2,13 @@ const cors = require("cors");
 const express = require("express");
 const { parse } = require("csv-parse");
 const fs = require("fs");
+const path = require("path");
 
 const port = 5000;
 const app = express();
+
 app.use(cors());
+app.use(express.static(path.join(__dirname, "client/build")));
 
 const Quotes = [];
 
@@ -27,6 +30,10 @@ app.get("/", (req, res) => {
   // sorteia uma frase do array Quotes
   let quote = Quotes[Math.floor(Math.random() * Quotes.length)];
   res.send({ mensagem: quote });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 app.listen(port, () => {
